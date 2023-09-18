@@ -10,7 +10,7 @@ const express_1 = __importDefault(require("express"));
 const mongoDbConfig_1 = __importDefault(require("./config/mongoDbConfig"));
 const Routes_1 = __importDefault(require("./router/Routes"));
 const app = (0, express_1.default)();
-const port = 3000;
+const port = process.env.PORT || 3000;
 app.use(express_1.default.json());
 app.use('*', (0, cors_1.default)());
 app.use('/', Routes_1.default);
